@@ -10,6 +10,7 @@ white: #ffffff
     height: auto;
     max-height: 200px;
     overflow-x: hidden;
+    min-width: 5px;
 }
 .card {
     cursor: pointer;
@@ -22,9 +23,12 @@ white: #ffffff
     font-size: 2em !important;
 }
 .rgba-gradient {
-    background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(163, 75, 79, 1) 100%);
+    /* background: -moz-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(163, 75, 79, 1) 100%);
     background: -webkit-linear-gradient(45deg, rgba(213, 15, 61, 0.6), rgba(163, 75, 79, 1) 100%);
-    background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(163, 75, 79, 1) 100%);
+    background: linear-gradient(to 45deg, rgba(213, 15, 61, 0.6), rgba(163, 75, 79, 1) 100%); */
+    background: -moz-linear-gradient(45deg, rgba(119, 161, 211, 0.6), rgba(230, 132, 174, 1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(119, 161, 211, 0.6), rgba(230, 132, 174, 1) 100%);
+    background: linear-gradient(to 45deg, rgba(119, 161, 211, 0.6), rgba(230, 132, 174, 1) 100%);
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
@@ -34,9 +38,10 @@ white: #ffffff
     background: transparent;
 }
 .card-body {
-    background: rgba(53, 53, 151, 1.0);
+    background: #352D5DD6;
     box-shadow: inset 0 2px 4px 0px rgba(50, 50, 50, 0.75);
 }
+
 .jumbotron img {
     max-width: auto;
     height: 50%;
@@ -61,6 +66,12 @@ white: #ffffff
     font-size: 1.5rem;
 }
 
+.alcoholic-tag {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+
 .bootstrap-tagsinput {
     font-family: 'Poppins', sans-serif;
     font-size: 1em;
@@ -81,7 +92,7 @@ white: #ffffff
     padding: 1rem;
 }
 .badge-primary {
-    background-color: #ed7d77;
+    background-color: #E684AE;
 }
 
 header, footer, body {
@@ -90,22 +101,33 @@ header, footer, body {
     font-family: 'Poppins', sans-serif;
 }
 a, .page-link {
-    color: #a34b4f;
+    color: #595183;
 }
 a:hover .page-link:hover {
-    color: #353598;
+    color: #352D5DD6;
 }
 title, p, h1, .text-muted {
     color: #ffffff;
 }
 
 .model-body{
-    background: rgba(53, 53, 151, 1);
+    background: #595183;
     color: white;
 }
 .modal-content{
-  background: rgba(53, 53, 151, 1);
+  background: #595183;
   color: white;
+}
+.ingredients ul {
+    list-style: none;
+} 
+.ingredients li:before {
+    content: '✅';
+    margin-left: -20px;
+    margin-right: 10px;
+}
+hr {
+    border-top: 1px dotted white;
 }
 a .page-link {
     border: none;
@@ -116,7 +138,7 @@ a .page-link {
         font-size: 1.5em !important;
     }
     .bootstrap-tagsinput {
-        font-size: 0.75em;
+        font-size: 0.9em;
     }
     .text-center img {
         height: 25%;
@@ -125,7 +147,8 @@ a .page-link {
         padding: 0rem !important; 
     }
 }
-@media (min-width: 576px) {
+
+@media (min-width: 400px) {
     .card-columns {
         column-count: 2;
     }
@@ -133,13 +156,13 @@ a .page-link {
 
 @media (min-width: 768px) {
     .card-columns {
-        column-count: 3;
+        column-count: 2;
     }
 }
 
 @media (min-width: 992px) {
     .card-columns {
-        column-count: 4;
+        column-count: 2;
     }
 }
 
@@ -147,4 +170,26 @@ a .page-link {
     .card-columns {
         column-count: 5;
     }
+}
+
+label[for="favCheck"] {
+    color: white;
+}
+
+#firebaseui-auth-container {
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+}
+
+.card i.fa-heart {
+    position: absolute;
+    color: white;
+    background-color: #595183;
+    border-radius: 100%;
+    margin: 0.5em;
+    right: 0;
+    padding: 0.25em;
+    font-size: 1.25em;
 }
